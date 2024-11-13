@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "909814389415",
+    "project_id": "detect-fakes-73100175",
+    "storage_bucket": "detect-fakes-73100175.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909814389415:android:b409de575cf1e9fdb45982",
+        "android_client_info": {
+          "package_name": "com.example.detect_fakes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909814389415-2fjgsi4uje7s983mst8ak57j0t506vuk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.detect_fakes",
+            "certificate_hash": "ed204df2eddf23232013608926e0cf3a8bafd0c6"
+          }
+        },
+        {
+          "client_id": "909814389415-3dqug0q1ue9btmcnr5rdncl4d1ksg032.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNKgRMnpO3XfHK1Ih2SGm6lYZZZJ3Co9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909814389415-3dqug0q1ue9btmcnr5rdncl4d1ksg032.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "detect-fakes-73100175",
+                    "appId": "1:909814389415:android:b409de575cf1e9fdb45982",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "detect-fakes-73100175",
+                    "configurations": {
+                        "android": "1:909814389415:android:b409de575cf1e9fdb45982",
+                        "web": "1:909814389415:web:152cf835564257cab45982"
+                    }
+                }
+            }
+        }
+    }
+}

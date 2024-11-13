@@ -1,0 +1,1 @@
+Hello GPT, in this chat, we are going to work a mobile app, which I am going to develop in flutter. I will provide you some codes for improvement or I can also ask you to write some codes for me. So remember this chat context is only for the Flutter app. One more thing: before generating any response, take your time to construct the best and error-free response.
