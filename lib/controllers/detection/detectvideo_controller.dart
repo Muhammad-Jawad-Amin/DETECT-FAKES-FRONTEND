@@ -34,9 +34,6 @@ class DetectVideoController extends GetxController {
         numFrames.toString(),
       );
 
-      final String deleteVideoPath = videoData.videoUrl;
-      final String deleteThumbnailPath = videoData.thumbnailUrl;
-
       detectedVideo = await apiService.downloadFile(
         videoData.videoUrl,
         "DFTempVideo_${DateTime.now()}.mp4",
@@ -45,9 +42,6 @@ class DetectVideoController extends GetxController {
         videoData.thumbnailUrl,
         "DFTempThumbnail_${DateTime.now()}.png",
       );
-
-      await apiService.deleteFile(deleteVideoPath, "Video");
-      await apiService.deleteFile(deleteThumbnailPath, "Thumbnail");
 
       ScreenLoader.closeScreenLoader();
       ScreenLoader.openScreenLoader(

@@ -77,23 +77,4 @@ class ApiService {
       throw e.toString();
     }
   }
-
-  Future<void> deleteFile(String filePath, String fileType) async {
-    String completeUrl = "$baseUrl$deleteFileUrl";
-    final url = Uri.parse(completeUrl);
-    final body = jsonEncode({
-      "filePath": filePath,
-      "fileType": fileType,
-    });
-
-    try {
-      await http.post(
-        url,
-        headers: {"Content-Type": "application/json"},
-        body: body,
-      );
-    } catch (e) {
-      throw e.toString();
-    }
-  }
 }

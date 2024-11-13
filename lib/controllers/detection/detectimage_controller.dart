@@ -26,12 +26,10 @@ class DetectImageController extends GetxController {
       );
 
       ImageModel imageData = await apiService.detectImage(imageFile);
-      final String deleteImagePath = imageData.imageUrl;
       detectedImage = await apiService.downloadFile(
         imageData.imageUrl,
         "DFTempImage_${DateTime.now()}.png",
       );
-      await apiService.deleteFile(deleteImagePath, "Image");
 
       ScreenLoader.closeScreenLoader();
       ScreenLoader.openScreenLoader(

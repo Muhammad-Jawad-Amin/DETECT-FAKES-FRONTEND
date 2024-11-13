@@ -1,4 +1,3 @@
-import 'package:detect_fakes/screens/main/profile_screen.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +11,7 @@ import 'package:detect_fakes/utils/constants/app_images.dart';
 import 'package:detect_fakes/utils/constants/app_sizes.dart';
 import 'package:detect_fakes/screens/main/aboutus_screen.dart';
 import 'package:detect_fakes/common/drawer/drawer_tile.dart';
+import 'package:detect_fakes/screens/main/profile_screen.dart';
 import 'package:detect_fakes/controllers/firebase/fireauth_controller.dart';
 
 class SideDrawer extends StatelessWidget {
@@ -52,33 +52,33 @@ class SideDrawer extends StatelessWidget {
                 child: Column(
                   children: [
                     DrawerTile(
-                      callBack: () => Get.off(() => const HomeScreen()),
+                      callBack: () => Get.offAll(() => const HomeScreen()),
                       screenIcon: const Icon(Iconsax.home),
                       screenTitle: "Home",
                     ),
                     if (!isAnonymousUser && !isGoogleUser)
                       DrawerTile(
-                        callBack: () => Get.off(() => const ProfileScreen()),
+                        callBack: () => Get.to(() => const ProfileScreen()),
                         screenIcon: const Icon(Iconsax.personalcard),
                         screenTitle: "Profile",
                       ),
                     DrawerTile(
-                      callBack: () => Get.off(() => const HistoryScreen()),
+                      callBack: () => Get.to(() => const HistoryScreen()),
                       screenIcon: const Icon(Iconsax.timer),
                       screenTitle: "History",
                     ),
                     DrawerTile(
-                      callBack: () => Get.off(() => const TimeLineScreen()),
+                      callBack: () => Get.to(() => const TimeLineScreen()),
                       screenIcon: const Icon(Iconsax.clock),
                       screenTitle: "Timeline",
                     ),
                     DrawerTile(
-                      callBack: () => Get.off(() => const FaqsScreen()),
+                      callBack: () => Get.to(() => const FaqsScreen()),
                       screenIcon: const Icon(Iconsax.message_question),
                       screenTitle: "FAQs",
                     ),
                     DrawerTile(
-                      callBack: () => Get.off(() => const AboutUsScreen()),
+                      callBack: () => Get.to(() => const AboutUsScreen()),
                       screenIcon: const Icon(Iconsax.info_circle),
                       screenTitle: "About Us",
                     ),
