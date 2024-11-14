@@ -19,6 +19,12 @@ class _HomeImageSectionState extends State<HomeImageSection> {
   final MediaPickerService imagePicker = MediaPickerService();
   final detectImageController = Get.put(DetectImageController());
 
+  @override
+  void initState() {
+    clearImage();
+    super.initState();
+  }
+
   Future<void> pickImage() async {
     final pickedImage = await imagePicker.pickImageFromGallery();
     if (pickedImage != null) {

@@ -25,6 +25,12 @@ class _HomeVideoSectionState extends State<HomeVideoSection> {
   final MediaPickerService videoPicker = MediaPickerService();
   final detectVideoController = Get.put(DetectVideoController());
 
+  @override
+  void initState() {
+    clearVideo();
+    super.initState();
+  }
+
   Future<void> pickVideo() async {
     final pickedVideo = await videoPicker.pickVideoFromGallery();
     if (pickedVideo != null) {
