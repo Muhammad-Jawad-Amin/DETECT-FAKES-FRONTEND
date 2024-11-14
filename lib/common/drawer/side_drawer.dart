@@ -36,7 +36,7 @@ class SideDrawer extends StatelessWidget {
                   children: [
                     Center(
                       child: SizedBox(
-                        height: Get.height * 0.15,
+                        height: Get.height * 0.14,
                         child: Image.asset(
                           dark
                               ? AppImages.darkAppNameLogo
@@ -92,7 +92,7 @@ class SideDrawer extends StatelessWidget {
             child: Column(
               children: [
                 DrawerTile(
-                  callBack: () => Get.off(() => const SettingsScreen()),
+                  callBack: () => Get.to(() => const SettingsScreen()),
                   screenIcon: const Icon(Iconsax.setting),
                   screenTitle: "Settings",
                 ),

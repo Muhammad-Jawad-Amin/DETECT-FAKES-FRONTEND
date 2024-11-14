@@ -1,12 +1,14 @@
+import 'package:detect_fakes/controllers/history/historyimage_controller.dart';
+import 'package:detect_fakes/controllers/history/historyvideo_controller.dart';
 import 'package:detect_fakes/controllers/appdata/profilepic_controller.dart';
 import 'package:detect_fakes/controllers/appdata/user_controller.dart';
-import 'package:detect_fakes/common/drawer/side_drawer.dart';
 import 'package:detect_fakes/common/home/homeimagesection.dart';
 import 'package:detect_fakes/common/home/homevideosection.dart';
 import 'package:detect_fakes/common/others/custom_appbar.dart';
 import 'package:detect_fakes/utils/constants/app_colors.dart';
 import 'package:detect_fakes/utils/constants/app_images.dart';
 import 'package:detect_fakes/utils/constants/app_sizes.dart';
+import 'package:detect_fakes/common/drawer/side_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -33,6 +35,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
     if (!Get.isRegistered<ProfilePicController>()) {
       Get.put(ProfilePicController(), permanent: true);
+    }
+
+    if (!Get.isRegistered<HistoryImageController>()) {
+      Get.put(HistoryImageController(), permanent: true);
+    }
+
+    if (!Get.isRegistered<HistoryVideoController>()) {
+      Get.put(HistoryVideoController(), permanent: true);
     }
   }
 

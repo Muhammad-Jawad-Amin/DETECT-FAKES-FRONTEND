@@ -1,4 +1,3 @@
-import 'package:detect_fakes/common/others/custom_appbar.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +6,7 @@ import 'package:detect_fakes/utils/constants/app_colors.dart';
 import 'package:detect_fakes/utils/constants/app_sizes.dart';
 import 'package:detect_fakes/common/faqs/general_faqs.dart';
 import 'package:detect_fakes/common/faqs/technical_faqs.dart';
+import 'package:detect_fakes/common/others/custom_appbar.dart';
 
 class FaqsScreen extends StatefulWidget {
   const FaqsScreen({super.key});
@@ -57,14 +57,14 @@ class _FaqsScreenState extends State<FaqsScreen> {
                 fillColor: themeColor,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: Text(
                       'General Questions',
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: Text(
                       'Technical Questions',
                       style: Theme.of(context).textTheme.bodyLarge,

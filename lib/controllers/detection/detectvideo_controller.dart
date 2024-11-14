@@ -66,7 +66,7 @@ class DetectVideoController extends GetxController {
       );
 
       videoData.userId = fireAuthController.currentUserId!;
-      videoData.videoId = "${videoData.userId}&${videoData.videoId}";
+      videoData.videoId = "${videoData.userId}_${videoData.videoId}";
       videoData.videoUrl = uploadedVideoUrl;
       videoData.thumbnailUrl = uploadedThumbnailUrl;
 

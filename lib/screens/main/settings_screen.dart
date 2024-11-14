@@ -144,7 +144,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       Center(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                            horizontal: AppSizes.lg,
+                            horizontal: AppSizes.md,
                           ),
                           child: ToggleButtons(
                             isSelected: isSelected,
@@ -154,7 +154,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.symmetric(
-                                  horizontal: AppSizes.lg,
+                                  horizontal: AppSizes.iconMd,
                                 ),
                                 child: Text(
                                   'Light',
@@ -163,7 +163,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
-                                  horizontal: AppSizes.lg,
+                                  horizontal: AppSizes.iconMd,
                                 ),
                                 child: Text(
                                   'System',
@@ -172,7 +172,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
-                                  horizontal: AppSizes.lg,
+                                  horizontal: AppSizes.iconMd,
                                 ),
                                 child: Text(
                                   'Dark',
@@ -191,7 +191,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               const SizedBox(height: AppSizes.spaceBtwSections),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: AppSizes.appBarHeight),
+                    horizontal: AppSizes.imageThumbSize),
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(

@@ -7,18 +7,19 @@ import 'package:detect_fakes/utils/theme/app_theme.dart';
 import 'package:detect_fakes/utils/constants/app_texts.dart';
 import 'package:detect_fakes/screens/others/splash_screen.dart';
 import 'package:detect_fakes/controllers/others/app_bindings.dart';
-import 'package:detect_fakes/controllers/firebase/fireauth_controller.dart';
-import 'package:detect_fakes/controllers/firebase/firestore_controller.dart';
+import 'package:detect_fakes/utils/others/apphelper_functions.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
+  AppBindings.initNetworkController();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   ).then((FirebaseApp value) {
-    Get.put(FireAuthController(), permanent: true);
-    Get.put(FireStoreController(), permanent: true);
+    AppBindings.initFirebaseControllers();
   });
+  AppHelperFunctions.hideSystemUI();
+  AppHelperFunctions.setupAutoHide();
   runApp(const DFApp());
 }
 
@@ -34,7 +35,7 @@ class DFApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
-      initialBinding: AppBindings(),
+      onInit: () => AppHelperFunctions.hideSystemUI(),
     );
   }
 

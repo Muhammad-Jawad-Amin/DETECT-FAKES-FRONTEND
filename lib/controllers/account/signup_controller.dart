@@ -1,9 +1,9 @@
 import 'package:detect_fakes/controllers/firebase/fireauth_controller.dart';
 import 'package:detect_fakes/controllers/firebase/firestore_controller.dart';
-import 'package:detect_fakes/common/loaders/custom_snackbars.dart';
-import 'package:detect_fakes/common/loaders/screen_loader.dart';
 import 'package:detect_fakes/controllers/appdata/user_controller.dart';
 import 'package:detect_fakes/screens/account/verifyemail_screen.dart';
+import 'package:detect_fakes/common/loaders/custom_snackbars.dart';
+import 'package:detect_fakes/common/loaders/screen_loader.dart';
 import 'package:detect_fakes/utils/constants/app_images.dart';
 import 'package:detect_fakes/models/user_model.dart';
 import 'package:flutter/material.dart';

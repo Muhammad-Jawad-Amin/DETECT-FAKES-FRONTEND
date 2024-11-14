@@ -46,7 +46,7 @@ class DetectImageController extends GetxController {
       );
 
       imageData.userId = fireAuthController.currentUserId!;
-      imageData.imageId = "${imageData.userId}&${imageData.imageId}";
+      imageData.imageId = "${imageData.userId}_${imageData.imageId}";
       imageData.imageUrl = uploadedImageUrl;
 
       ScreenLoader.closeScreenLoader();

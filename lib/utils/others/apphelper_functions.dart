@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AppHelperFunctions {
   static Color? getColor(String value) {
@@ -32,6 +33,20 @@ class AppHelperFunctions {
     } else {
       return null;
     }
+  }
+
+  static void hideSystemUI() {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  }
+
+  static void setupAutoHide() {
+    SystemChannels.platform.setMethodCallHandler((MethodCall call) async {
+      if (call.method == SystemUiOverlay.values.toString()) {
+        await Future.delayed(const Duration(seconds: 3));
+        hideSystemUI();
+      }
+      return null;
+    });
   }
 
   static void showSnackBar(BuildContext context, String message) {
@@ -76,11 +91,6 @@ class AppHelperFunctions {
   static bool isDarkMode() {
     return Get.isDarkMode;
   }
-
-  // static String getFormattedDate(DateTime date,
-  //     {String format = 'dd MMM yyyy'}) {
-  //   return DateFormat(format).format(date);
-  // }
 
   static List<T> removeDuplicates<T>(List<T> list) {
     return list.toSet().toList();

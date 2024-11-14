@@ -10,40 +10,37 @@ class NoInternetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopScope(
-      canPop: false,
-      child: Scaffold(
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(AppSizes.defaultSpace),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: AppSizes.spaceBtwSections * 6,
-                ),
-                Lottie.asset(
-                  AppImages.noInternetAnimation,
-                  width: Get.width * 0.8,
-                ),
-                const SizedBox(
-                  height: AppSizes.spaceBtwSections * 2,
-                ),
-                Text(
-                  AppTexts.noInternetTitle,
-                  style: Theme.of(context).textTheme.headlineMedium,
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(
-                  height: AppSizes.spaceBtwItems,
-                ),
-                Text(
-                  AppTexts.noInternetSubTitle,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(AppSizes.defaultSpace),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: AppSizes.spaceBtwSections * 6,
+              ),
+              Lottie.asset(
+                AppImages.noInternetAnimation,
+                width: Get.width * 0.8,
+              ),
+              const SizedBox(
+                height: AppSizes.spaceBtwSections * 2,
+              ),
+              Text(
+                AppTexts.noInternetTitle,
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                height: AppSizes.spaceBtwItems,
+              ),
+              Text(
+                AppTexts.noInternetSubTitle,
+                style: Theme.of(context).textTheme.bodyLarge,
+                textAlign: TextAlign.center,
+              ),
+            ],
           ),
         ),
       ),
